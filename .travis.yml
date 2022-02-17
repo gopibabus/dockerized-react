@@ -10,6 +10,7 @@ script:
   - docker run -e CI=true gopibabus/simple-react-app npm run test -- --coverage
 
 deploy:
+  skip_cleanup: true
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "dockerized-react"
